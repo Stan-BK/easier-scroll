@@ -1,0 +1,19 @@
+{
+  "name": "easy-scroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stan-BK/easy-scroll.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stan-BK/easy-scroll/issues"
+  },
+  "homepage": "https://github.com/Stan-BK/easy-scroll#readme"
+}
