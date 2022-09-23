@@ -1,5 +1,5 @@
 {
-  "name": "@kkk/easy-scroll",
+  "name": "easier-scroll",
   "version": "1.0.0",
   "description": "An easier scroll way for you",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Stan-BK/easy-scroll.git"
+    "url": "git+https://github.com/Stan-BK/easier-scroll.git"
   },
-  "author": "Kkk",
+  "author": "stan-bk",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Stan-BK/easy-scroll/issues"
+    "url": "https://github.com/Stan-BK/easier-scroll/issues"
   },
-  "homepage": "https://github.com/Stan-BK/easy-scroll#readme"
+  "homepage": "https://github.com/Stan-BK/easier-scroll#readme"
 }

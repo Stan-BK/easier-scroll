@@ -3,20 +3,20 @@ Easy-scroll enhance the overflow content scroll behavior, you can scroll by defa
 
 # Usage
 ```
-npm install @Kkk/easy-scroll
+npm install easier-scroll
 ```
-This module will register a global methods `EasyScroll`, it's work on DOM,  you should make sure the target element is already rendered in DOM when using it.
+This module will register a global methods `EasierScroll`, it's work on DOM,  you should make sure the target element is already rendered in DOM when using it.
 ```js
 // CommonJS
-const EasyScroll = require('@kkk/easy-scroll')
+const EasierScroll = require('easier-scroll')
 // ESModule
-import EasyScroll from ('@kkk/easy-scroll')
+import EasierScroll from ('easier-scroll')
 
-// you can also access EasyScroll from globalThis
-const EasyScroll = globalThis.EasyScroll
+// you can also access EasierScroll from globalThis
+const EasierScroll = globalThis.EasierScroll
 
-EasyScroll(
-  el: '.easy-scroll', // pass a element, or a string that can be query by document.querySelector
+EasierScroll(
+  el: '.easier-scroll', // pass a element, or a string that can be query by document.querySelector
   options: {
     scrollBehaviour: 'instant', // default 'smooth', define the scroll behavior
     hidden: false // default true, define the scrollbar visibility

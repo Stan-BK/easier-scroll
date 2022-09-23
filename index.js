@@ -1,10 +1,10 @@
 ;(function() {
-  function EasyScroll(el, opt = {}) {
+  function EasierScroll(el, opt = {}) {
     createHiddenStyle()
     const { scrollBehaviour = 'smooth', hidden = true } = opt
 
     if (globalThis.document == null) {
-      throw new Error('EasyScroll must run after Document was rendered')
+      throw new Error('EasierScroll must run after Document was rendered')
     }
 
     if (el == null) {
@@ -138,16 +138,16 @@
     return scrollObj
   }
 
-  globalThis.EasyScroll = EasyScroll
+  globalThis.EasierScroll = EasierScroll
 
   if (globalThis.document) {
     createHiddenStyle()
   }
   function createHiddenStyle() {
-    if (document.getElementsByClassName('easy-scroll-hidden').length > 0) return
+    if (document.getElementsByClassName('easier-scroll-hidden').length > 0) return
 
     const css = document.createElement('style')
-    css.classname = 'easy-scroll-hidden'
+    css.classname = 'easier-scroll-hidden'
     css.innerHTML = `.noScrollBar::-webkit-scrollbar {
       display: none;
     }`
@@ -155,4 +155,4 @@
   }
 })()
 
-module.exports = globalThis.EasyScroll
+module.exports = globalThis.EasierScroll
