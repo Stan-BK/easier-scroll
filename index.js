@@ -1,6 +1,12 @@
 ;(function() {
   function EasyScroll(el, opt = {}) {
-    const { scrollBehaviour = 'smooth' } = opt
+    createHiddenStyle()
+    const { scrollBehaviour = 'smooth', hidden = true } = opt
+
+    if (globalThis.document == null) {
+      throw new Error('EasyScroll must run after Document was rendered')
+    }
+
     if (el == null) {
       throw new Error('el must be a document element or a string for querying element')
     }
@@ -75,7 +81,7 @@
     initWrapElem()
     function initWrapElem() {
       el.style.overflow = 'scroll'
-      el.classList.add('noScrollBar')
+      hidden && el.classList.add('noScrollBar')
     }
     
     initScrollEvent()
@@ -132,13 +138,21 @@
     return scrollObj
   }
 
-  window.EasyScroll = EasyScroll
+  globalThis.EasyScroll = EasyScroll
 
-  const css = document.createElement('style')
-  css.innerHTML = `.noScrollBar::-webkit-scrollbar {
-    display: none;
-  }`
-  document.head.appendChild(css)
+  if (globalThis.document) {
+    createHiddenStyle()
+  }
+  function createHiddenStyle() {
+    if (document.getElementsByClassName('easy-scroll-hidden').length > 0) return
 
+    const css = document.createElement('style')
+    css.classname = 'easy-scroll-hidden'
+    css.innerHTML = `.noScrollBar::-webkit-scrollbar {
+      display: none;
+    }`
+    document.head.appendChild(css)
+  }
 })()
 
+module.exports = globalThis.EasyScroll

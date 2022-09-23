@@ -1,7 +1,7 @@
 {
-  "name": "easy-scroll",
+  "name": "@kkk/easy-scroll",
   "version": "1.0.0",
-  "description": "",
+  "description": "An easier scroll way for you",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Stan-BK/easy-scroll.git"
   },
-  "author": "",
+  "author": "Kkk",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Stan-BK/easy-scroll/issues"
