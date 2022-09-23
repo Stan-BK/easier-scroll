@@ -37,7 +37,8 @@
     function generateScrollObj() {
       const O = {
         _percentX: 0,
-        _percentY: 0
+        _percentY: 0,
+        _isHidden: hidden
       }
       Object.defineProperties(O, {
         scrollPercentX: {
@@ -73,6 +74,15 @@
               behavior: scrollBehaviour
             })
           } 
+        },
+        isHiddenScrollbar: {
+          get() {
+            return this._isHidden
+          },
+          set(val) {
+            this._isHidden = val
+            el.classList.toggle('noScrollBar')
+          }
         }
       })
       return O
@@ -81,7 +91,7 @@
     initWrapElem()
     function initWrapElem() {
       el.style.overflow = 'scroll'
-      hidden && el.classList.add('noScrollBar')
+      scrollObj.isHiddenScrollbar && el.classList.add('noScrollBar')
     }
     
     initScrollEvent()
