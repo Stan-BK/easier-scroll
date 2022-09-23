@@ -1,6 +1,7 @@
 # easy-scroll
 Easy-scroll enhance the overflow content scroll behavior, you can scroll by default way(scrollbar) or setting the scroll percent, even drag-scroll behavior(like mobile web performance) is supported. 
 
+There is a sample run on <https://stan-bk.github.io/easier-scroll/>
 # Usage
 ```
 npm install easier-scroll
