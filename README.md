@@ -16,11 +16,15 @@ import EasierScroll from ('easier-scroll')
 // you can also access EasierScroll from globalThis
 const EasierScroll = globalThis.EasierScroll
 
-EasierScroll(
+const config = EasierScroll(
   el: '.easier-scroll', // pass a element, or a string that can be query by document.querySelector
   options: {
     scrollBehaviour: 'instant', // default 'smooth', define the scroll behavior
     hidden: false // default true, define the scrollbar visibility
   }
 )
+
+config.scrollPercentX = 1 // 0 ~ 1, 调整横向滚动距离百分比
+config.scrollPercentY = 1 // 0 ~ 1, 调整竖向滚动距离百分比
+config.isHiddenPercent = false // 显示原声滚动条，默认为true
 ```
