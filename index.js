@@ -81,7 +81,11 @@
           },
           set(val) {
             this._isHidden = val
-            el.classList.toggle('noScrollBar')
+            if (val) {
+              el.classList.add('noScrollBar')
+            } else {
+              el.classList.remove('noScrollBar')
+            }
           }
         }
       })
