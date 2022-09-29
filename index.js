@@ -54,6 +54,7 @@
     
             el.scrollTo({
               left: val * offsetX,
+              top: this._percentY * offsetY,
               behavior: scrollBehaviour
             })
           } 
@@ -70,6 +71,7 @@
             }
     
             el.scrollTo({
+              left: this._percentX * offsetX,
               top: val * offsetY,
               behavior: scrollBehaviour
             })
