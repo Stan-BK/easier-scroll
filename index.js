@@ -106,8 +106,8 @@
         isAutoScroll = true
         scrollObj.scrollPercentX = el.scrollLeft / offsetX
         scrollObj.scrollPercentY = el.scrollTop / offsetY
-        scrollXcb && scrollXcb(scroll.scrollPercentX)
-        scrollYcb && scrollYcb(scroll.scrollPercentY)
+        scrollXcb && scrollXcb(scrollObj.scrollPercentX)
+        scrollYcb && scrollYcb(scrollObj.scrollPercentY)
       })
     }
     
