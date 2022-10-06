@@ -1,7 +1,7 @@
 ;(function() {
   function EasierScroll(el, opt = {}) {
     createHiddenStyle()
-    const { scrollBehaviour = 'smooth', hidden = true } = opt
+    const { scrollBehaviour = 'smooth', hidden = true, scrollXcb, scrollYcb } = opt
 
     if (globalThis.document == null) {
       throw new Error('EasierScroll must run after Document was rendered')
@@ -104,7 +104,10 @@
     function initScrollEvent() {
       el.addEventListener('scroll', (e) => {
         isAutoScroll = true
+        scrollObj.scrollPercentX = el.scrollLeft / offsetX
         scrollObj.scrollPercentY = el.scrollTop / offsetY
+        scrollXcb && scrollXcb(scroll.scrollPercentX)
+        scrollYcb && scrollYcb(scroll.scrollPercentY)
       })
     }
     
