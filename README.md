@@ -19,7 +19,6 @@ const EasierScroll = globalThis.EasierScroll
 const config = EasierScroll(
   el: '.easier-scroll', // pass a element, or a string that can be query by document.querySelector
   options: {
-    scrollBehaviour: 'instant', // default 'smooth', define the scroll behavior
     hidden: false, // default true, define the scrollbar visibility
     scrollXcb: (scrollPercentX) => console.log(scrollPercentX), // function fire when scrollPercentX had changed
     scrollYcb: (scrollPercentY) => console.log(scrollPercentY) // function fire when scrollPercentY had changed
