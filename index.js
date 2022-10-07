@@ -49,6 +49,7 @@
             this._percentX = val
             if (isAutoScroll) {
               isAutoScroll = false
+              scrollXcb && scrollXcb(val)
               return
             }
     
@@ -67,6 +68,7 @@
             this._percentY = val
             if (isAutoScroll) {
               isAutoScroll = false
+              scrollYcb && scrollYcb(val)
               return
             }
     
@@ -106,8 +108,6 @@
         isAutoScroll = true
         scrollObj.scrollPercentX = el.scrollLeft / offsetX
         scrollObj.scrollPercentY = el.scrollTop / offsetY
-        scrollXcb && scrollXcb(scrollObj.scrollPercentX)
-        scrollYcb && scrollYcb(scrollObj.scrollPercentY)
       })
     }
     
