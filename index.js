@@ -8,7 +8,7 @@
     }
 
     if (el == null) {
-      throw new Error('el must be a document element or a string for querying element')
+      throw new Error(`el expeact a HTML element or a selector, but got a '${el}'`)
     }
 
     const toStr = Object.prototype.toString
