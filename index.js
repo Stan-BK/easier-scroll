@@ -18,7 +18,7 @@
     } else if (!toStr.call(el).includes('HTML')) {
       throw new Error('el must be a document element')
     }
-    
+
     if (el.childElementCount !== 1) {
       throw new Error('el must have only 1 childNode')
     }
@@ -51,13 +51,13 @@
               isAutoScroll = false
               return
             }
-    
+
             el.scrollTo({
               left: val * offsetX,
               top: this._percentY * offsetY,
               behavior: 'auto'
             })
-          } 
+          }
         },
         scrollPercentY: {
           get() {
@@ -69,13 +69,13 @@
               isAutoScroll = false
               return
             }
-    
+
             el.scrollTo({
               left: this._percentX * offsetX,
               top: val * offsetY,
               behavior: 'auto'
             })
-          } 
+          }
         },
         isHiddenScrollbar: {
           get() {
@@ -99,7 +99,7 @@
       el.style.overflow = 'scroll'
       scrollObj.isHiddenScrollbar && el.classList.add('noScrollBar')
     }
-    
+
     initScrollEvent()
     function initScrollEvent() {
       el.addEventListener('scroll', (e) => {
@@ -110,7 +110,7 @@
         scrollYcb && scrollYcb(scrollObj.scrollPercentY)
       })
     }
-    
+
     initDragBehaviour()
     function initDragBehaviour() {
       let queue = []
@@ -131,7 +131,7 @@
           top: -e.movementY
         })
       }
-      
+
       function mouseUp(e) {
         if (queue.length > 0) {
           const offsetY = Math.round(queue[1] - queue[0])
@@ -166,7 +166,7 @@
     if (document.getElementsByClassName('easier-scroll-hidden').length > 0) return
 
     const css = document.createElement('style')
-    css.classname = 'easier-scroll-hidden'
+    css.className = 'easier-scroll-hidden'
     css.innerHTML = `.noScrollBar::-webkit-scrollbar {
       display: none;
     }`
