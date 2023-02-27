@@ -166,7 +166,7 @@
     if (document.getElementsByClassName('easier-scroll-hidden').length > 0) return
 
     const css = document.createElement('style')
-    css.classname = 'easier-scroll-hidden'
+    css.className = 'easier-scroll-hidden'
     css.innerHTML = `.noScrollBar{scrollbar-width:none;overflow:-moz-scrollbars-none;-ms-overflow-style:none}.noScrollBar::-webkit-scrollbar {display: none;}`
     document.head.appendChild(css)
   }
